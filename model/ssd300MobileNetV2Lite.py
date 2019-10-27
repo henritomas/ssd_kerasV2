@@ -115,7 +115,7 @@ def SSD(input_shape, num_classes):
 
     Input0 = Input(input_shape)
     mobilenetv2=MobileNetV2(input_shape=mobilenetv2_input_shape,include_top=False,weights='imagenet')
-    FeatureExtractor=Model(inputs=mobilenetv2.input, outputs=mobilenetv2.get_layer('res_connect_12').output)
+    FeatureExtractor=Model(inputs=mobilenetv2.input, outputs=mobilenetv2.get_layer('block_12_add').output)
     #get_3rd_layer_output = K.function([mobilenetv2.layers[114].input, K.learning_phase()],
     #                                  [mobilenetv2.layers[147].output])
 
