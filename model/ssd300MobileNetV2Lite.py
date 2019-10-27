@@ -10,7 +10,7 @@ from keras.layers.merge import concatenate
 from keras.layers import Reshape
 from keras.models import Model
 from ssd_layers import PriorBox
-from keras.applications.mobilenet_v2 import MobileNetV2
+from keras.applications import MobileNetV2
 
 
 def relu6(x):
